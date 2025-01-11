@@ -2,7 +2,7 @@ import { Form, useFetcher, useLoaderData } from "@remix-run/react";
 import type { FunctionComponent } from "react";
 import { ActionFunctionArgs, json, LoaderFunctionArgs } from "@remix-run/node";
 
-import { getContact, updateContact, type ContactRecord } from "../data";
+import { getContact, updateContact, type ContactRecord } from "../../data";
 import invariant from "tiny-invariant";
 
 export const loader = async ({ params }: LoaderFunctionArgs) => {

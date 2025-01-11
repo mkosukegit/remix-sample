@@ -6,6 +6,11 @@
 
 - [Remix Tutorial](https://remix-docs-ja.techtalk.jp/start/tutorial)
 
+# Remix Flat Route
+
+- [Remix Flat Route](https://github.com/kiliman/remix-flat-routes)
+  今はこの設定はしていないが、Next.js のようなよりネストしたディレクトリベースルーティングが可能になる
+
 ## Development
 
 From your terminal:
