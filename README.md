@@ -2,6 +2,10 @@
 
 - [Remix Docs](https://remix.run/docs)
 
+# チュートリアル
+
+- [Remix Tutorial](https://remix-docs-ja.techtalk.jp/start/tutorial)
+
 ## Development
 
 From your terminal:
