@@ -1,18 +1,13 @@
 import { Form, useFetcher, useLoaderData } from "@remix-run/react";
 import type { FunctionComponent } from "react";
-import { ActionFunctionArgs, json, LoaderFunctionArgs } from "@remix-run/node";
+import { ActionFunctionArgs } from "@remix-run/node";
 
-import { getContact, updateContact, type ContactRecord } from "../../data";
+import { updateContact, type ContactRecord } from "../../data";
 import invariant from "tiny-invariant";
+import { loader } from "./api.contracts";
 
-export const loader = async ({ params }: LoaderFunctionArgs) => {
-  invariant(params.contactId, "Missing contactId param");
-  const contact = await getContact(params.contactId);
-  if (!contact) {
-    throw new Response("Not Found", { status: 404 });
-  }
-  return json({ contact });
-};
+// こうすればUIとドメインロジックを分離できる
+export { loader } from "./api.contracts";
 
 export const action = async ({ params, request }: ActionFunctionArgs) => {
   invariant(params.contactId, "Missing contactId param");
